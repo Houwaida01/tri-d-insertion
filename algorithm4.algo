@@ -1,0 +1,17 @@
+ALGORITHM tri_d_insertion
+VAR
+    tab : ARRAY_OF INTEGER
+    i:INTEGER
+BEGIN
+    read (tab[0])
+    FOR i FROM 1 TO length(tab)-1 STEP 1  DO
+        read(tab[i])
+        FOR j FROM i-1 TO 0 STEP -1  DO
+          IF (tab[j]>tab[i]) THEN
+              swap(tab[i],tab[j])
+          END_IF
+            
+        END_FOR
+    END_FOR
+    write(tab)
+END
